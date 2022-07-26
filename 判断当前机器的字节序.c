@@ -3,10 +3,18 @@
 
 int check_sys()
 {
-	int a = 1;
+	//int a = 1;
 	//返回1，小端
 	//返回0，大端
-	return *(char*)&a;
+	//return *(char*)&a;
+	
+	union Un
+	{
+		char c;
+		int i;
+	}u;
+	u.i = 1;
+	return u.c;
 }
 
 int main()
