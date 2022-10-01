@@ -1,0 +1,19 @@
+<script>
+    var tab = "<table>";
+    for(i=1;i<10;i++) {
+        tab += "<tr>";
+        for(j=1;j<=i;j++) {
+            tab += "<td>"+j+"&times;"+i+"="+i*j+"</td>";
+        }
+        tab += "</tr>";
+    }
+        tab += "<table>";
+        document.write(tab);
+</script>
+
+<style>
+    td{
+        width:80px;
+        text-align: left;
+    }
+</style>
