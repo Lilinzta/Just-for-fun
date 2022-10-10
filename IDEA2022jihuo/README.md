@@ -1,14 +1,13 @@
-                                                                                               安装完后先打开idea显示激活界面后再关闭
+安装完后先打开idea显示激活界面后再关闭  
+
 1.以下内容追加到idea的安装目录的bin目录下的idea64.exe.vmoptions中(.vmoptions是文件后缀)。
 
-# 引用补丁，开头必须以 -javaagent: 开头，后面跟着补丁的绝对路径（可根据你实际的位置进行修改）,注意路径一定要填写正确，且不能包含中文，否则会导致 IDEA 无法启动
+#### # 引用补丁，开头必须以 -javaagent: 开头，后面跟着补丁的绝对路径（可根据你实际的位置进行修改）,注意路径一定要填写正确，且不能包含中文，否则会导致 IDEA 无法启动
 -javaagent:D:/ja-netfilter/ja-netfilter.jar
 
-# 最新 IDEA 版本需要添加下面两行，以支持 Java 17, 否则会报 Key is invalid
---add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED
+#### # 最新 IDEA 版本需要添加下面两行，以支持 Java 17, 否则会报 Key is invalid
+--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED  
 --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED
-
-
 
 2.打开idea选择激活码激活并粘贴以下内容。
 
