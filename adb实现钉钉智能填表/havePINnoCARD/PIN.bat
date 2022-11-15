@@ -1,16 +1,9 @@
-::修改cmd编码为UTF-8
-chcp 65001
-
 ::电源键
 adb shell input keyevent 224
 timeout /T 1
 
 ::上滑
 adb shell input swipe 540 1800 540 800 100
-timeout /T 1
-
-::点击使用密码解锁(启用)
-adb shell input tap 220 1680
 timeout /T 1
 
 ::解锁
@@ -30,7 +23,7 @@ adb shell input keyevent 3
 
 ::点击钉钉
 adb shell input tap 930 2250
-timeout /T 5
+timeout /T 3
 
 ::钉钉内点击
 adb shell input tap 540 710
@@ -40,7 +33,7 @@ timeout /T 5
 
 ::上划
 adb shell input swipe 540 1800 540 800 100
-timeout /T 5
+timeout /T 3
 
 ::点击获取定位
 adb shell input tap 1000 1220
@@ -48,12 +41,10 @@ timeout /T 5
 
 ::提交
 adb shell input tap 540 2260
-timeout /T 5
+timeout /T 3
 
-::提示信息
-type "E:\Desktop\钉钉自动打卡\1.txt"
-timeout /T 5
-::手机重启
-adb reboot
+::HOME键
+adb shell input keyevent 3
+
 ::电脑关机
 shutdown -s -t 3

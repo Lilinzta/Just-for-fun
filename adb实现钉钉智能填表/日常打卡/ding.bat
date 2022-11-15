@@ -1,6 +1,3 @@
-::修改cmd编码为UTF-8
-chcp 65001
-
 ::电源键
 adb shell input keyevent 224
 timeout /T 1
@@ -38,10 +35,11 @@ timeout /T 5
 adb shell input tap 540 2260
 timeout /T 3
 
-::提示信息
-type "E:\Desktop\钉钉自动打卡\1.txt"
-timeout /T 5
+::HOME键
+adb shell input keyevent 3
+
 ::手机重启
-adb reboot
+adb shell reboot
+
 ::电脑关机
 shutdown -s -t 3

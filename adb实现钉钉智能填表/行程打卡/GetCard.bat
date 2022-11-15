@@ -1,6 +1,3 @@
-::修改cmd编码为UTF-8
-chcp 65001
-
 ::电源键
 adb shell input keyevent 224
 timeout /T 1
@@ -47,17 +44,15 @@ adb shell input tap 540 2220
 timeout /T 5
 
 ::上划
-adb shell input swipe 540 1800 540 800 100
+adb shell input swipe 540 1800 540 600 100
 timeout /T 5
 
-
-
 ::点击获取定位
-adb shell input tap 1000 1220
+adb shell input tap 1000 410
 timeout /T 5
 
 ::点击加号
-adb shell input tap 100 680
+adb shell input tap 100 1000
 timeout /T 1
 
 ::选择图片
@@ -76,16 +71,15 @@ timeout /T 1
 adb shell input tap 750 1600
 timeout /T 1
 
-
-
 ::提交
 adb shell input tap 540 2260
 timeout /T 5
 
-::提示信息
-type "E:\Desktop\钉钉自动打卡\1.txt"
-timeout /T 5
+::HOME键
+adb shell input keyevent 3
+
 ::手机重启
-adb reboot
+adb shell reboot
+
 ::电脑关机
 shutdown -s -t 3
