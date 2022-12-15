@@ -95,6 +95,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Error checking
 Plug 'w0rp/ale'
 
+" Auto Complete
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -118,10 +120,24 @@ let NERDTreeMapPreview = ""
 let NERDTreeMapCloseDir = "n"
 let NERDTreeMapChangeRoot = "y"
 
+" ===
+" === You Complete ME
+" ===
+nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap g/ :YcmCompleter GetDoc<CR>
+nnoremap gt :YcmCompleter GetType<CR>
+nnoremap gr :YcmCompleter GoToReferences<CR>
+let g:ycm_autoclose_preview_window_after_completion=0
+let g:ycm_autoclose_preview_window_after_insertion=1
+let g:ycm_use_clangd = 0
+let g:ycm_python_interpreter_path = "/bin/python3"
+let g:ycm_python_binary_path = "/bin/python3"
+
 
 #.zshrc(alias)
 alias c="clear"
 alias ll="ls -al"
+alias cls="clear&ls -al"
 alias lc="lolcat"
 alias cm="cmatrix"
 alias install="apt-get install"
@@ -132,4 +148,3 @@ alias nf="neofetch"
 alias sf="screenfetch"
 alias jc="javac"
 alias ja="java"
-alias python="python3"
