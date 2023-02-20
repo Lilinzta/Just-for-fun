@@ -56,14 +56,14 @@
 
 ```bash
 # mount /dev/root_part /mnt
-# mount --mkdir /dev/efi_system_part
+# mount --mkdir /dev/efi_system_part /mnt/boot
 # swapon /dev/swap_part
 ```
 
 # 8.安装必需的软件包
 
 ```bash
-# pacstrap -K /mnt base base-devel linux linux-firmware dhcpcd iwd NetworkManager wireless_tools wpa_supplicant vim git
+# pacstrap -K /mnt base base-devel linux linux-firmware dhcpcd iwd networkmanager wireless_tools wpa_supplicant vim git
 ```
 
 # 9.配置系统
